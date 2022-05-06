@@ -1,0 +1,29 @@
+[
+    {
+      "nome": "Morty Smith",
+      "imagem": "assets/images/morty.PNG"
+     
+    },
+    {
+      "nome": "Rick Sanchez",
+      "imagem": "assets/images/rick.PNG"
+      
+    },
+    {
+      "nome": "Summer Smith",
+      "imagem": "assets/images/summer.PNG"
+      
+    },
+    {
+      "nome": "Jerry Smith",
+      "imagem": "assets/images/jerry.PNG"
+      
+    },
+    {
+      "nome": "Squanchy",
+      "imagem": "assets/images/squancy.PNG"
+      
+    }
+  ]
+
+  
