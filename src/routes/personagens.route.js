@@ -5,7 +5,6 @@ const { validId, validObjectBody } = require('../middlewares/personagem.middlewa
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../../swagger.json');
 
-
 router.use('/api-docs', swaggerUi.serve);
 router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
@@ -14,6 +13,6 @@ router.get('/one-personagem/:id', validId, controllerPersonagens.findByIdPersona
 router.post('/create-personagem', validObjectBody, controllerPersonagens.createPersonagemController);
 router.put('/update-personagem/:id',validId, validObjectBody, controllerPersonagens.updatePersonagemController);
 router.delete('/delete-personagem/:id', validId, controllerPersonagens.deletePersonagemController);
-router.get('/search/:nome', personagensController.searchPersonagemController);
+router.get('/search/:nome', controllerPersonagens.searchPersonagemController);
 
 module.exports = router;

@@ -1,16 +1,15 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const connectToDatabase = () => {
+const connectDatabase = () => {
+  console.log("Conectando ao banco de dados...");
+
   mongoose
-    .connect(process.env.URI_DATABASE, {  
+    .connect(process.env.DATABASE_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
-    .then(() => console.log('MongoDB Atlas Conectado!'))
-    .catch((error) =>
-      console.log(`Erro ao conectar com o MongoDB, erro: ${error}`),
-    );
+    .then(() => console.log("MongoDB Conectado!"))
+    .catch((err) => console.log(`Erro ao conectar com o banco: ${err}`));
 };
 
-module.exports = connectToDatabase;
-
+module.exports = connectDatabase;
