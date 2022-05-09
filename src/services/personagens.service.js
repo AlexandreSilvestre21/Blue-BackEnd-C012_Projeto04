@@ -16,8 +16,8 @@ const createPersonagemService = async (newPersonagem) => {
 };
 
 const updatePersonagemService = async (id, personagemEdited) => {
-  const personagemAtualizada = await Personagem.findByIdAndUpdate(id, personagemEdited);
-  return personagemAtualizada;
+  await Personagem.findByIdAndUpdate(id, personagemEdited);
+  return personagemEdited;
 };
 
 const deletePersonagemService = async (id) => {
@@ -25,7 +25,7 @@ const deletePersonagemService = async (id) => {
 };
 
 const searchPersonagemService = async (nome) => {
-    return await Personagem.find({ nome: {$regex: nome }});
+    return await Personagem.find({ nome: {$regex: nome, $options: "i" }});
   };
 
 module.exports = {

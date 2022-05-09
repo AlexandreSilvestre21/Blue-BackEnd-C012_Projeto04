@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "https://personagens2.onrender.com/personagens/api-docs/",
+      "url": "https://personagens2.onrender.com",
       "description": "API de produção"
     },
     {
@@ -56,10 +56,9 @@
                 "Usuário": {
                   "value": {
                     "name": "Rick Sanche",
-                    "username": "rickexample",
                     "email": "example@example.com",
-                    "password": "12345",
-                    "avatar": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+                    "password": "12345"
+                   
                   }
                 }
               }
@@ -118,7 +117,7 @@
         }
       }
     },
-    "/create-personagem": {
+    "/personagens/create-personagem": {
       "post": {
         "summary": "Cadastrar um personagem",
         "description": "Rota responsável por cadastrar um personagem",
@@ -133,8 +132,8 @@
               "examples": {
                 "Character": {
                   "value": {
-                    "name": "Rick",
-                    "image": "https://rickandmortyapi.com/api/character/avatar/292.jpeg"
+                    "nome": "Rick",
+                    "imagem": "https://rickandmortyapi.com/api/character/avatar/292.jpeg"
                   }
                 }
               }
@@ -162,7 +161,7 @@
         }
       }
     },
-    "/all-personagens": {
+    "/personagens/all-personagens": {
       "get": {
         "summary": "Lista de todos os personagens",
         "description": "Rota responsável por listar todos os personagens",
@@ -191,7 +190,7 @@
         }
       }
     },
-    "/one-personagem/{id}": {
+    "/personagens/one-personagem/{id}": {
       "get": {
         "summary": "Busca um personagem pelo ID",
         "description": "Rota responsável por buscar um personagem pelo ID",
@@ -229,7 +228,7 @@
         }
       }
     },
-    "/update-personagem/{id}": {
+    "/personagens/update-personagem/{id}": {
       "put": {
         "summary": "Editar um personagem pelo ID",
         "description": "Rota responsável por editar um personagem pelo ID",
@@ -252,8 +251,8 @@
               "examples": {
                 "Character": {
                   "value": {
-                    "name": "Rick",
-                    "image": "https://rickandmortyapi.com/api/character/avatar/292.jpeg"
+                    "nome": "Rick",
+                    "imagem": "https://rickandmortyapi.com/api/character/avatar/292.jpeg"
                   }
                 }
               }
@@ -284,7 +283,7 @@
         }
       }
     },
-    "/delete-personagem/{id}": {
+    "/personagens/delete-personagem/{id}": {
       "delete": {
         "summary": "Apagar um personagem pelo ID",
         "description": "Rota responsável por apagar um personagem pelo ID",
@@ -314,7 +313,7 @@
         }
       }
     },
-    "/search": {
+    "/personagens/search": {
       "get": {
         "summary": "Busca um personagem pelo nome",
         "description": "Rota responsável por buscar um personagem pelo nome",
@@ -322,7 +321,7 @@
         "security": [{ "bearerAuth": [] }],
         "parameters": [
           {
-            "name": "name",
+            "name": "nome",
             "in": "query",
             "type": "string",
             "description": "Busca de personagens pelo nome.",
@@ -382,10 +381,10 @@
       "Character": {
         "type": "object",
         "properties": {
-          "name": {
+          "nome": {
             "type": "string"
           },
-          "image": {
+          "imagem": {
             "type": "string"
           }
         }

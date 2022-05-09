@@ -9,11 +9,11 @@ const swaggerDocument = require('../../swagger.json');
 router.use('/api-docs', swaggerUi.serve);
 router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
-router.get('/all-personagens', authValida, controllerPersonagens.findAllPersonagensController);
-router.get('/one-personagem/:id', authValida, validId, controllerPersonagens.findByIdPersonagemController);
-router.post('/create-personagem', authValida, validObjectBody, controllerPersonagens.createPersonagemController);
-router.put('/update-personagem/:id', authValida, validId, validObjectBody, controllerPersonagens.updatePersonagemController);
-router.delete('/delete-personagem/:id', authValida, validId, controllerPersonagens.deletePersonagemController);
-router.get('/search/:nome', authValida, controllerPersonagens.searchPersonagemController);
+router.get('/personagens/all-personagens', authValida, controllerPersonagens.findAllPersonagensController);
+router.get('/personagens/one-personagem/:id', authValida, validId, controllerPersonagens.findByIdPersonagemController);
+router.post('/personagens/create-personagem', authValida, validObjectBody, controllerPersonagens.createPersonagemController);
+router.put('/personagens/update-personagem/:id', authValida, validId, validObjectBody, controllerPersonagens.updatePersonagemController);
+router.delete('/personagens/delete-personagem/:id', authValida, validId, controllerPersonagens.deletePersonagemController);
+router.get('/personagens/search', authValida, controllerPersonagens.searchPersonagemController);
 
 module.exports = router;

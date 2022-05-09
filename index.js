@@ -14,7 +14,7 @@ connectToDatabase();
 
 app.use(express.json());
 app.use(cors());
-app.use('/personagens', routes);
+app.use('/', routes);
 
 app.use("/users", userRoute);
 
