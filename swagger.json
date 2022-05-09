@@ -118,7 +118,7 @@
         }
       }
     },
-    "create-personagem": {
+    "/create-personagem": {
       "post": {
         "summary": "Cadastrar um personagem",
         "description": "Rota responsável por cadastrar um personagem",
