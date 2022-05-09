@@ -22,6 +22,6 @@ Status Code em todos os endpoints;
 Deploy no Render;
 Autenticacao JWT.
 
-🔧 Deploy - O deploy encontra-se no servidor Render e é possível acessá-lo aqui: 
+🔧 Deploy - O deploy encontra-se no servidor Render e é possível acessá-lo aqui: https://personagens2.onrender.com/personagens/api-docs
 
 🛠️ Principais ferramentas: NodeJS - Engine JavaScript - Language Express -Framework MongoDB - DataBase Swagger - documentation / API.
